@@ -1,11 +1,10 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Blockchain, Wallet, Transaction, Block, generateTransactionId } from '@/lib/crypto';
-import { Mining, Wallet as WalletIcon, Network, Activity } from 'lucide-react';
+import { Pickaxe, Wallet as WalletIcon, Network, Activity } from 'lucide-react';
 
 const BlockchainDashboard = () => {
   const [blockchain] = useState(() => new Blockchain());
@@ -152,7 +151,7 @@ const BlockchainDashboard = () => {
                   <p className="text-slate-400 text-sm">Difficulty</p>
                   <p className="text-2xl font-bold text-purple-400">{blockchain.difficulty}</p>
                 </div>
-                <Mining className="h-8 w-8 text-purple-400" />
+                <Pickaxe className="h-8 w-8 text-purple-400" />
               </div>
             </CardContent>
           </Card>
@@ -170,7 +169,7 @@ const BlockchainDashboard = () => {
             <Card className="bg-slate-800/50 border-slate-700 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="text-white flex items-center gap-2">
-                  <Mining className="h-5 w-5 text-cyan-400" />
+                  <Pickaxe className="h-5 w-5 text-cyan-400" />
                   Mining Dashboard
                 </CardTitle>
               </CardHeader>
